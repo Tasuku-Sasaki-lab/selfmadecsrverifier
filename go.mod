@@ -1,4 +1,4 @@
-module selfmade
+module selfmadecsrverifier
 
 go 1.17
 
