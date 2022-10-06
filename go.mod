@@ -1,4 +1,4 @@
-module selfmadecsrverifier
+module github.com/tasuku-revol/selfmadecsrverifier/v2
 
 go 1.17
 
