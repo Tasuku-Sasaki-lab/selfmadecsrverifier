@@ -43,7 +43,6 @@ func (v *selfmadeCSRVerifier) Verify(data []byte, ChallengePassword string, CSR 
 	values.Secret = challenge
 	// encode json
 	values_json, _ := json.Marshal(values)
-	fmt.Printf("[+] %s\n", string(values_json))
 	// タイムアウトを30秒に指定してClient構造体を生成
 	cli := &http.Client{Timeout: time.Duration(30) * time.Second}
 	// 生成したURLを元にRequest構造体を生成
@@ -72,6 +71,8 @@ func (v *selfmadeCSRVerifier) Verify(data []byte, ChallengePassword string, CSR 
 	body, _ := ioutil.ReadAll(rsp.Body)
 	fmt.Print("debug3:エラー！レスポンスを取得し出力\n")
 	fmt.Println(string(body))
+	fmt.Print("\n")
+	fmt.Print("unsupported protocol schemeの時は環境変数が設定されているかをチェック\n")
 	fmt.Print("\n")
 	return false, errors.New(string(body))
 }
