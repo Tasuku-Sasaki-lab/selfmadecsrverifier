@@ -1,3 +1,2 @@
 .env
-test/.env
-test/test.go
+test

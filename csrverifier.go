@@ -59,6 +59,8 @@ func (v *selfmadeCSRVerifier) Verify(data []byte, ChallengePassword string, CSR 
 		fmt.Print("debug2:POSTリクエスト発行\n")
 		fmt.Println(err)
 		fmt.Print("\n")
+		fmt.Print("unsupported protocol schemeの時は環境変数が設定されているかをチェック\n")
+		fmt.Print("\n")
 		return false, err
 	}
 	// 関数を抜ける際に必ずresponseをcloseするようにdeferでcloseを呼ぶ
