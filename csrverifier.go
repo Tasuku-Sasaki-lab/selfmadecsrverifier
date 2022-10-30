@@ -35,6 +35,7 @@ type Values struct {
 }
 
 func (v *selfmadeCSRVerifier) Verify(data []byte, ChallengePassword string, CSR *x509.CertificateRequest) (bool, error) {
+	fmt.Print("DEBUB\n")
 	fmt.Print(CSR.Subject)
 	fmt.Print("\n")
 	fmt.Print(CSR.Subject.CommonName )
