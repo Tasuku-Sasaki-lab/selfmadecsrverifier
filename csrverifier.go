@@ -35,7 +35,7 @@ type Values struct {
 }
 
 func (v *selfmadeCSRVerifier) Verify(data []byte, ChallengePassword string, CSR *x509.CertificateRequest) (bool, error) {
-	CN := CSR.Subject.String()
+	CN := CSR.Subject.CommonName
 	challenge := ChallengePassword
 	// build sample structure
 	values := new(Values)
