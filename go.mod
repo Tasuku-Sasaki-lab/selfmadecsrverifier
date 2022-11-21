@@ -1,4 +1,6 @@
-module github.com/Tasuku-Sasaki-lab/selfmadecsrverifier/v3
+module github.com/tasuku-revol/selfmadecsrverifier/v3
+
+replace github.com/tasuku-revol/selfmadecsrverifier/v3 => github.com/Tasuku-Sasaki-lab/selfmadecsrverifier/v3
 
 go 1.17
 
